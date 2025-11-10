@@ -1,0 +1,35 @@
+{
+  "model_name": "A15-CNN",
+  "timestamp": "2025-11-09T19:39:14.142357",
+  "dataset": {
+    "test_samples": 1050,
+    "normal_samples": 525,
+    "tuberculosis_samples": 525
+  },
+  "performance_metrics": {
+    "accuracy": 0.9942857142857143,
+    "precision": 0.9905482041587902,
+    "recall": 0.9980952380952381,
+    "f1_score": 0.9943074003795066,
+    "roc_auc": 0.9995972789115646,
+    "cohens_kappa": 0.9885714285714285
+  },
+  "classification_results": {
+    "normal_correct": 520,
+    "normal_total": 525,
+    "tb_correct": 524,
+    "tb_total": 525,
+    "normal_accuracy": 0.9904761904761905,
+    "tb_accuracy": 0.9980952380952381
+  },
+  "confusion_matrix": [
+    [
+      520,
+      5
+    ],
+    [
+      1,
+      524
+    ]
+  ]
+}

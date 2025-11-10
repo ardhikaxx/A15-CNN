@@ -1,0 +1,58 @@
+
+% A15-CNN Tuberculosis Detection Results
+% Generated on 2025-11-09 19:39:14
+
+=== PERFORMANCE TABLE ===
+
+\begin{table}[h]
+\centering
+\caption{Performance Metrics of A15-CNN Model for Tuberculosis Detection}
+\label{tab:performance}
+\begin{tabular}{lcc}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Accuracy & 0.9943 (99.43\%%) \\
+Precision & 0.9905 \\
+Recall (Sensitivity) & 0.9981 \\
+F1-Score & 0.9943 \\
+Cohen's Kappa & 0.9886 \\
+ROC AUC & 0.9996 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+=== CONFUSION MATRIX ===
+
+\begin{table}[h]
+\centering
+\caption{Confusion Matrix of A15-CNN Model}
+\label{tab:confusion}
+\begin{tabular}{lcc}
+\hline
+& \textbf{Predicted Normal} & \textbf{Predicted Tuberculosis} \\
+\hline
+\textbf{Actual Normal} & 520 & 5 \\
+\textbf{Actual Tuberculosis} & 1 & 524 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+=== DETAILED METRICS ===
+
+\begin{table}[h]
+\centering
+\caption{Detailed Classification Report}
+\label{tab:detailed}
+\begin{tabular}{lcccc}
+\hline
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\hline
+Normal & 0.9905 & 0.0019 & 0.9943 & 525 \\
+Tuberculosis & 0.9981 & 0.9905 & 0.9943 & 525 \\
+\hline
+\end{tabular}
+\end{table}
+
