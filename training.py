@@ -14,22 +14,18 @@ import pandas as pd
 from tqdm import tqdm
 import time
 
-# Set device
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"Menggunakan device: {device}")
 
-# Hyperparameters
 BATCH_SIZE = 32
 LEARNING_RATE = 0.001
 EPOCHS = 50
 IMG_SIZE = 224
 
-# Path dataset
 DATA_DIR = r"D:\A15-CNN\data"
 TRAIN_DIR = os.path.join(DATA_DIR, "train")
 VAL_DIR = os.path.join(DATA_DIR, "val")
 
-# Transformasi data
 train_transform = transforms.Compose([
     transforms.Resize((IMG_SIZE, IMG_SIZE)),
     transforms.RandomHorizontalFlip(p=0.5),
@@ -45,7 +41,6 @@ val_transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
-# Custom Dataset Class
 class ChestXRayDataset(Dataset):
     def __init__(self, data_dir, transform=None):
         self.data_dir = data_dir
@@ -53,7 +48,6 @@ class ChestXRayDataset(Dataset):
         self.images = []
         self.labels = []
         
-        # Load normal images
         normal_dir = os.path.join(data_dir, "normal")
         for img_name in os.listdir(normal_dir):
             if img_name.lower().endswith(('.png', '.jpg', '.jpeg')):
@@ -285,6 +279,5 @@ if __name__ == "__main__":
     training_time = (end_time - start_time) / 60
     print(f"Total training time: {training_time:.2f} menit")
     
-    # Save final model
     torch.save(model.state_dict(), r'D:\A15-CNN\models\final_model.pth')
     print("Final model disimpan sebagai 'final_model.pth'")
