@@ -1,6 +1,6 @@
 {
   "model_name": "A15-CNN",
-  "timestamp": "2025-11-14T22:24:45.431526",
+  "timestamp": "2025-11-15T09:04:08.591293",
   "dataset": {
     "test_samples": 1050,
     "normal_samples": 525,
